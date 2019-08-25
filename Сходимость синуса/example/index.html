@@ -1,0 +1,217 @@
+<!--<!doctype html>
+
+<html>
+
+<head lang="en">
+	<meta charset = 'utf-8'/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.91/jsxgraphcore.js"></script>
+        <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+		<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+        <script type="text/javascript"
+        src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" />
+
+<style>
+   .menu {
+    position: fixed; /* Фиксированное положение */
+    right: 10px; /* Расстояние от правого края окна браузера */
+    top: 4%; /* Расстояние сверху */
+    padding: 10px; /* Поля вокруг текста */ 
+    background: #ffe; /* Цвет фона */ 
+    border: 1px solid #333; /* Параметры рамки */ 
+   }
+</style>	
+	<title>Дополнительная Задача </title>
+
+	<link rel='stylesheet' href='../css/eulerface_layout.css' media='screen' />
+	<link rel='stylesheet' href='../css/eulerface_inline.css' media='screen' />
+	<link rel='stylesheet' href='../css/eulerface_select.css' media='screen' />
+	<link rel='stylesheet' href='template_style.css' media='screen' />
+</head>
+
+<body lang = 'ru'>
+
+<table width = "100%">
+    <tr>
+
+    <td>
+    <div class = "menu"> <center>
+    <form>
+    <strong> Выберите функцию:</strong> <br>
+    <FORM NAME = "funcGetter">
+			<div id="radio">
+			<input type = "radio" name = "funchoice" value = "func1" id = "func1" checked onclick = "redrawCanvas(0)" class = "radio"> <img src = 'render1.gif'></img><br><br>
+			<input type = "radio" name = "funchoice" value = "func2" id = "func2" onclick = "redrawCanvas(0)" class = "radio"> <img src = 'render2.gif'></img><br><br>
+			
+			</div><br>
+			</FORM>
+	</form>
+	</center></div>
+	</td>
+	</tr>
+	</table>
+
+
+	<header id = 'mainBar'>
+		<nav id = 'siteNav'>Глава IV.Интегрирование.Неопределённый интеграл</nav>		
+	</header>
+
+	<article class = 'articleContent'>
+		<header id = 'articleHeader'>
+			<h1 id = 'articleTitle'>Неопределённый интеграл</h1>
+		
+        </header>
+		
+		
+		<section class = 'articlePage'>
+			<div class = 'bodyText'>
+			    
+				<p>
+				<FONT COLOR = "#0000FF"> <h3>Решение задач путём "склеивания констант"</FONT></h3>
+				<br><B>Дополнительная Задача.</B> <br>Вычислить интеграл: \( \Large \int_{}  \normalsize ( \mid 1+x \mid - \mid 1-x \mid )  dx \)
+                <br><br>Решение: Сначала изобразим подынтегральную функцию:
+				</p>
+							
+			</div>
+		</section>
+	
+		<figure class = 'visual'>
+			<div class = 'aspect'>
+				<div class = 'aspectHolder12'></div>
+				<figure id = 'plot1' class = 'subVisual'></figure>
+			</div>		
+		</figure>
+		
+		<section class = 'articlePage'>
+			<div class = 'bodyText'>
+				<p>
+				Далее, \[ ( \mid 1+x \mid - \mid 1-x \mid )  dx = 
+				\begin{cases} 
+				-1-x - (1-x), & x \leq -1, \\	1+x-(1-x), & -1 < x \leq 1, \\	1+x- (-1+x) ,& x > 1. \end{cases} 
+				\Rightarrow \]
+				
+				
+				
+				
+				</p>
+			</div>
+		</section>
+	
+		<figure class = 'visual'>
+			<div class = 'aspect'>
+				<div class = 'aspectHolder12'></div>
+				<figure id = 'plot2' class = 'subVisual'></figure>
+			</div>		
+		</figure>
+	</article>
+	
+    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script type='text/x-mathjax-config'>
+		MathJax.Hub.Config({
+			skipStartupTypeset: true,
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+			'HTML-CSS': { linebreaks: { automatic: true, width: '75% container' } }
+		});
+    </script>
+	<script src = '../js/eulerface.js'></script>
+	<script src = '../js/select.js'></script>
+	<script src = '../js/SkeletonWithControl.js'></script>
+	<script src = 'sin1.js'></script>
+	<script src = 'sin2.js'></script>
+	
+	
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Сходимость синуса</title>
+	<meta charset="utf-8">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.91/jsxgraphcore.js"></script>
+        <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+		<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+        <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" />
+	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+		
+</head>
+
+<body lang = 'ru'>
+<div>
+	<FONT> <h2>Сходимость несобственных интегралов</FONT></h2>
+	<FONT><h3> Простейшие признаки сравнения: </FONT></h3> 
+	<B> Первый признак сравнения: </B>  Пусть \( \forall x \in [a,+\infty) \Rightarrow \mid f(x) \mid \leq g(x) \).
+    Тогда если \( \int_{a}^{+\infty} g(x) dx \) сходится, то и \( \int_{a}^{+\infty} f(x) dx \) сходится <br> (далее сходимость будет обозначаться как \(\to\) ).
+	<br><B> Второй признак сравнения: </B> 
+	Пусть \( f(x),g(x) \geq 0 \) и \( \exists \lim_{x\to+\infty} \frac {f(x)}{g(x)} =k\). Тогда: 
+    <br><br>1.Если 0 < k < \( +\infty \) , то \(\int_{a}^{+\infty} f(x)dx \to \Leftarrow \Rightarrow  \int_{a}^{+\infty} g(x)dx \to\).
+    <br><br>2.Если k=0 , то \(\int_{a}^{+\infty} g(x)dx \to \Rightarrow  \int_{a}^{+\infty} f(x)dx \to\).
+    <br><br>3.Если \(k=+\infty\) , то \(\int_{a}^{+\infty} g(x)dx \not \to \Rightarrow  \int_{a}^{+\infty} f(x)dx \not \to\).   	
+	<br><br><B> Признак сравнения Дирихле: </B> 
+	<br> Пусть выполняются следующие условия:
+	<br><br>1.Функция f(x) непрерывна, и её первообразная ограниченна, т.е. |F(x)| \(\leq\ k\);
+	<br><br>2.g(x) непрерывно-дифференцируема и монотонна;
+	<br><br>3.\( g(x) \to 0 \) при \( x \to +\infty \) . Тогда интеграл \( \int_{a}^{+\infty} g(x)f(x)dx \) сходится.
+	<br><br> Данные признаки опираются на тот факт, что у нас уже есть некоторый интеграл \(\int_{a}^{+\infty} g(x)dx \), 
+    про который известно, сходится он или нет. Поэтому найдём следующие несобственные интегралы I рода и II рода, на которые 
+	сможем "опираться" далее.
+    \[ 1) \int_{1}^{+\infty} \frac {dx}{x^{\alpha}} = \lim_{A \to +\infty} \int_{1}^{A} \frac{dx}{x^{\alpha}}= 
+	\lim_{A \to +\infty} \begin{cases} \ln A, & \alpha = 1 \\ \frac{A^{1- \alpha} -1}{1- \alpha} ,& \alpha \not = 1  \end{cases} =
+    \begin{cases} \frac {1}{\alpha -1} ,& \alpha >1  \Rightarrow \Large \int_{\normalsize 1}^{\normalsize +\infty} \frac {dx}{x^{\alpha}} \to \normalsize
+	\\ + \infty ,& \alpha \leq 1 \Rightarrow \Large \int_{\normalsize 1}^{\normalsize +\infty} \frac {dx}{x^{\alpha}} \not \to \normalsize \end{cases}	\]	
+	
+	\[ 2) \int_{0}^{1} \frac {dx}{x^{\alpha}} = \lim_{ \varepsilon  \to 0 + 0} \int_{\varepsilon}^{1} \frac{dx}{x^{\alpha}}= 
+	\lim_{\varepsilon \to 0 + 0 } \begin{cases} -\ln \varepsilon, & \alpha = 1 \\ \frac{1- \varepsilon^{1- \alpha}}{1- \alpha} ,& \alpha \not = 1  \end{cases} =
+    \begin{cases} \frac {1}{1- \alpha } ,& \alpha < 1  \Rightarrow \Large \int_{\normalsize 0}^{\normalsize 1} \frac {dx}{x^{\alpha}} \to \normalsize
+	\\ + \infty ,& \alpha \geq 1 \Rightarrow \Large \int_{\normalsize 0}^{\normalsize 1} \frac {dx}{x^{\alpha}} \not \to \normalsize \end{cases}	\]	
+	<FONT><h3> Абсолютная и условная сходимость: </FONT></h3> 
+	\(\bullet \) Если и \( \int_{a}^{+\infty} f(x)dx \), и \(\int_{a}^{+\infty} \mid f(x) \mid dx \) сходятся, то
+	говорят, что \( \int_{a}^{+\infty} f(x)dx \) сходится <B> абсолютно </B> (качественно);
+	<br><br>  \(\bullet \) Если и \( \int_{a}^{+\infty} f(x)dx \), и \(\int_{a}^{+\infty} \mid f(x) \mid dx \) расходятся, то
+	говорят, что \( \int_{a}^{+\infty} f(x)dx \) расходится;
+	<br><br>  \(\bullet \) Если же \( \int_{a}^{+\infty} f(x)dx \) сходится, а \(\int_{a}^{+\infty} \mid f(x) \mid dx \) расходятся, то
+	говорят, что \( \int_{a}^{+\infty} f(x)dx \) сходится <B> условно</B> (некачественно);
+	
+	<br><br><br> Исследуем на сходимость пример \( \Large\int_{\normalsize 0}^{\normalsize +\infty} \Large \frac{\sin(x)}{x^\alpha}\normalsize dx \) на двух промежутках:
+	<br> 1) на  \( [1, +\infty] \) : 
+	<br>\( \alpha >1 : \)По признаку Дирихле подынтегральное выражение \(\Large\frac{\sin(x)}{x^\alpha}\normalsize\) сходится ( f(x) =sin(x), F(x)=-cos(x) \( \leq 1 , g(x)=\frac{1}{x^\alpha} \to 0 , x \to \infty\) ) .
+	<br>Оценим \( \Large\mid \frac{\sin(x)}{x^\alpha}\mid\normalsize \leq \Large\frac{1}{x^\alpha} , \frac {1}{x^\alpha}\normalsize \) на \([1;+\infty] \to \).
+	Таким образом, по Первому признаку наблюдается абсолютная сходимость.
+	<br>\( 0< \alpha \leq 1 : \) В этом случае также есть сходимость, но условная, т.к.
+	\( \Large\mid \frac{\sin(x)}{x^\alpha}\mid\normalsize \leq \Large\frac{\sin^2(x)}{x^\alpha} = \frac{1-cos(2x)}{2x^\alpha} =  
+	\frac{1}{2x^\alpha}-\frac{cos(2x)}{2x^\alpha} \), где \( \Large\frac{cos(2x)}{2x^\alpha} \to , \frac{1}{2x^\alpha} \not \to \normalsize\).
+	Следовательно, \( \Large\mid \frac{\sin(x)}{x^\alpha}\mid \not \to \normalsize\), т.е. сходимость условная.
+	<br><br>\(  \alpha \leq 0 : \) наблюдается расходимость
+    <br><br> 2) на  \( [0, 1] \) :
+	<br>Поскольку для исследования данной функции на сходимость нам интересна только окрестность нуля, можно принять \(\sin(x)=x\) и можно исследовать функцию
+	\(x^{\alpha - 1}\)
+	<br> \(\Large\int_{\normalsize 0}^{\normalsize 1} \Large \frac{1}{x^{\alpha - 1}}\normalsize dx = \lim_{t\to0+0} \frac{1 - t^{2 - \alpha}}{2 - \alpha}\), при  \(a\neq2\)
+	<br> \(\Large\int_{\normalsize 0}^{\normalsize 1} \Large \frac{1}{x^{\alpha - 1}}\normalsize dx = \lim_{t\to0+0} -\ln t\), при  \(a=2\)
+    <br>\( \alpha \geq 2 : \)  расходится .
+	<br>\(  \alpha < 2 : \) сходится.
+    <br><br><br>На первом графике красным цветом изображена функция \(F(A)=\Large\int_{\normalsize \pi / 4}^{\normalsize A} \Large \frac{\sin(x)}{x^\alpha}\normalsize dx\).
+	Зеленым цветом изображена \(F(A)=\Large\int_{\normalsize pi/4}^{\normalsize A} |\Large \frac{\sin(x)}{x^\alpha}\normalsize dx\Large|\normalsize\). Черные линии показвыают сходятся ли локальные экстремумы.
+	<br> На втором графике изображенна функция \(F(A)=\Large\int_{2^{-A}}^{\normalsize 1} \Large \frac{\sin(x)}{x^\alpha}\normalsize dx\)
+
+	<br><br><br></div>
+	<div id="plot"></div>
+
+<script src="../js/SkeletonWithControl.js"></script>
+<script src="MySin.js"></script>
+
+</body>
+</html>
