@@ -48,7 +48,7 @@ function addRimSumm(plot, fun, left, right, a, color = 6, move = Math.PI / 16, s
     var y1;
     var RimMiddleSum = st_v;
     for (b = left + move; b <= right; b += move) {
-        RimMiddleSum += rimSumm(fun, xPrev, b, 4);
+        RimMiddleSum += rimSumm(fun, xPrev, b, 1);
         x1 = b;
         y1 = RimMiddleSum;
         var line = plot.addLine(xPrev,yPrev,x1,y1,{strokeWidth:1.5,color:color});
@@ -84,7 +84,7 @@ function rimSumm(fun, left, right, n) {
 var S = "условно сходится";
 var text0 = "график sinx/(x^a) на [PI/4,+inf] при a = ";
 
-let e = 0.000001, maxright = 100;
+let e = 0.000001, maxright = 50;
 
 function changeRange(value) {
     p1.removeAll();
@@ -98,7 +98,7 @@ function changeRange(value) {
 
     addRimSumm(p1, mathFunction, options.left, maxright, pow);
     summ = addRimSumm(p1, mathFunctionAbs, options.left, maxright, 2, 4);
-    addRimSumm(p1, mathFunctionAbs, maxright, maxright * 10, 2, 4, 16, summ);
+    addRimSumm(p1, mathFunctionAbs, maxright, maxright * 10, 2, 4, 50, summ);
     if (value  > 1) {
         S = "абсолютно сходится";
     } else {
@@ -119,7 +119,7 @@ function addRimSumm3() {
     move = 0.2;
     cons = Math.pow(2, -move);
     x = move;
-    for (var b = cons; x < maxright; x += move) {
+    for (var b = cons; x < maxright * 3; x += move) {
         RimMiddleSum += rimSumm(mathFunction2,  b, xPrev, 20);
         x1 = b;
         y1 = RimMiddleSum;
@@ -203,7 +203,7 @@ var range = controls1.addRange(changeRange, text0 + "1 " + S, -2, 5, 0.05, 1);
 
 ////////////////////////////////////третий график///////////////////////////////////////
 var controls3 = new app.Controls(container.addEmptyDiv());
-var p3 = container.addPlot({left:-0.2, right:100, top:700, bottom:-0.5, height:400, width:500});
+var p3 = container.addPlot({left:-0.2, right:maxright * 3, top:700, bottom:-0.5, height:400, width:500});
 
 pow2 = 2;
 
