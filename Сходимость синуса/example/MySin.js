@@ -112,7 +112,7 @@ function changeRange(value) {
 }
 
 var S3 = "расходится";
-var text2 = "график sinx/(x^a) на (0,1] при a = ";
+var text2 = "При a = "; text3 = " на (0, 1]";
 
 function addRimSumm3() {
     var xPrev = 1, yPrev = 0, x1, y1, RimMiddleSum = 0, move = 0.01, left=e, right=1;
@@ -139,7 +139,7 @@ function changeRange3(value3) {
         S3 = "сходится";
     }
     else { S3="расходится";}
-    range3.setText(text2 + value3 + ' ' + S3) ;
+    range3.setText(text2 + value3 + ' интеграл ' + S3 + text3) ;
 
 }
 
@@ -207,5 +207,5 @@ var p3 = container.addPlot({left:-0.2, right:maxright * 2, top:700, bottom:-0.5,
 
 pow2 = 2;
 
-var range3 = controls3.addRange(changeRange3, text2 + "2 " + S3, 1, 3, 0.01, 2);
+var range3 = controls3.addRange(changeRange3, text2 + "2 интеграл " + S3 + text3, 1, 3, 0.01, 2);
 addRimSumm3()
