@@ -48,7 +48,7 @@ function addRimSumm(plot, fun, left, right, a, color = 6, move = Math.PI / 16, s
     var y1;
     var RimMiddleSum = st_v;
     for (b = left + move; b <= right; b += move) {
-        RimMiddleSum += rimSumm(fun, xPrev, b, 20);
+        RimMiddleSum += rimSumm(fun, xPrev, b, 4);
         x1 = b;
         y1 = RimMiddleSum;
         var line = plot.addLine(xPrev,yPrev,x1,y1,{strokeWidth:1.5,color:color});
