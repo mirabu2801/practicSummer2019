@@ -84,7 +84,7 @@ function rimSumm(fun, left, right, n) {
 var S = "условно сходится";
 var text0 = "график sinx/(x^a) на [PI/4,+inf] при a = ";
 
-let e = 0.000001, maxright = 75;
+let e = 0.000001, maxright = 100;
 
 function changeRange(value) {
     p1.removeAll();
@@ -98,7 +98,7 @@ function changeRange(value) {
 
     addRimSumm(p1, mathFunction, options.left, maxright, pow);
     summ = addRimSumm(p1, mathFunctionAbs, options.left, maxright, 2, 4);
-    addRimSumm(p1, mathFunctionAbs, maxright, maxright * 10, 2, 4, 50, summ);
+    addRimSumm(p1, mathFunctionAbs, maxright, maxright * 10, 2, 4, 10, summ);
     if (value  > 1) {
         S = "абсолютно сходится";
     } else {
@@ -199,11 +199,11 @@ addRimSumm(p1, mathFunction, options.left, maxright, pow);
 summ = addRimSumm(p1, mathFunctionAbs, options.left, maxright, 2, 4);
 addRimSumm(p1, mathFunctionAbs, maxright, maxright * 10, 2, 4, 16, summ);
 
-var range = controls1.addRange(changeRange, text0 + "1 " + S, -2, 5, 0.05, 1);
+var range = controls1.addRange(changeRange, text0 + "1 " + S, -1, 3, 0.02, 1);
 
 ////////////////////////////////////третий график///////////////////////////////////////
 var controls3 = new app.Controls(container.addEmptyDiv());
-var p3 = container.addPlot({left:-0.2, right:maxright * 2, top:700, bottom:-0.5, height:400, width:500});
+var p3 = container.addPlot({left:-0.2, right:maxright * 1.5, top:700, bottom:-0.5, height:400, width:500});
 
 pow2 = 2;
 
