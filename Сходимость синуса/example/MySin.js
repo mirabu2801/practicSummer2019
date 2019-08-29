@@ -1,4 +1,4 @@
-function addAreaUnderFunc(plot, fun, ranges, fillOpacity, fillPos, fillNeq, abs = false) {
+function addAreaUnderFunc(plot, fun, ranges, fillOpacity, fillPos, fillNeq, abs = false, mmm=0.05) {
     e = 0.001;
     var i;
     for (i = 0; i + 1 < ranges.length; ++i) {
@@ -6,7 +6,7 @@ function addAreaUnderFunc(plot, fun, ranges, fillOpacity, fillPos, fillNeq, abs 
         var arr0 = [];
         arr0.push({x: ranges[i], y: 0});
         arr0.push({x: ranges[i], y: fun(ranges[i])});
-        for (k = ranges[i]; k <= ranges[i + 1]; k += 0.01) {
+        for (k = ranges[i]; k <= ranges[i + 1]; k += mmm) {
             y = fun(k);
             if (abs) {
                 y = Math.abs(y);
@@ -135,6 +135,8 @@ function changeRange3(value3) {
     p3.removeAll();
     pow2 = value3;
     addRimSumm3();
+    addAreaUnderFunc(p3, mathFunction2, [e, 1],1, 3, 1, false, 0.005)
+    p3.addFunc(mathFunction2, {left:e, right:1})
     if (value3 < 2) {
         S3 = "сходится";
     }
@@ -203,9 +205,11 @@ var range = controls1.addRange(changeRange, text0 + "1 " + S, -1, 3, 0.02, 1);
 
 ////////////////////////////////////третий график///////////////////////////////////////
 var controls3 = new app.Controls(container.addEmptyDiv());
-var p3 = container.addPlot({left:-0.2, right:maxright * 1.5, top:700, bottom:-0.5, height:400, width:500});
+var p3 = container.addPlot({left:-0.2, right:1.05, top:15, bottom:-0.5, height:400, width:750});
 
 pow2 = 2;
 
 var range3 = controls3.addRange(changeRange3, text2 + "2 интеграл " + S3 + text3, 1, 3, 0.01, 2);
 addRimSumm3()
+addAreaUnderFunc(p3, mathFunction2, [e, 1],1, 3, 1, false, 0.005)
+p3.addFunc(mathFunction2, {left:e, right:1})
