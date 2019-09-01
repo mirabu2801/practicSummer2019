@@ -30,7 +30,7 @@ function addAreaUnderFunc(plot, fun, ranges, fillOpacity, fillPos, fillNeq, abs 
     }
 }
 
-function addRimSumm(plot, fun, left, right, a, color = 6, move = Math.PI / 8, st_v=0) {
+function addRimSumm(plot, fun, left, right, a, color = 6, move = Math.PI / 4, st_v=0) {
     function checkMax(x) {
         d = (x - Math.PI) % (Math.PI * 2);
         e = 0.001;
@@ -84,7 +84,7 @@ function rimSumm(fun, left, right, n) {
 var S = "условно сходится";
 var text0 = "график sinx/(x^a) на [PI/4,+inf] при a = ";
 
-let e = 0.000001, maxright = 100;
+let e = 0.000001, maxright = 200;
 
 function changeRange(value) {
     p1.removeAll();
@@ -186,7 +186,7 @@ var container = new PlotContainer("plot");
 
 /////////////////////////////////первый график///////////////////////////////////
 var controls1 = new app.Controls(container.addEmptyDiv());
-var p1 = container.addPlot({left:-0.5, right:maxright, top:2, bottom:-2, height:400, width:750});
+var p1 = container.addPlot({left:-0.5, right:maxright, top:2, bottom:-2, height:400, width:1100});
 
 ranges = [options.left];
 for (var i = 1; i * Math.PI < maxright; i++) {
@@ -205,7 +205,7 @@ var range = controls1.addRange(changeRange, text0 + "1 " + S, -1, 3, 0.02, 1);
 
 ////////////////////////////////////третий график///////////////////////////////////////
 var controls3 = new app.Controls(container.addEmptyDiv());
-var p3 = container.addPlot({left:-0.2, right:1.05, top:15, bottom:-0.5, height:400, width:750});
+var p3 = container.addPlot({left:-0.2, right:1.05, top:15, bottom:-0.5, height:400, width:1100});
 
 pow2 = 2;
 
